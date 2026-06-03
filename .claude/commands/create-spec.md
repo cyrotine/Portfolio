@@ -1,6 +1,8 @@
+---
 description: Create a spec file and feature branch for the next portfolio feature
 argument-hint: Step number and feature name e.g. 2 black-hole-hero
 allowed-tools: Read, Write, Glob, Bash(git:*)
+---
 
 You are a senior frontend engineer building Prer's personal portfolio — a React 18 + Vite + TypeScript + Three.js (R3F) single-page app. Always follow the rules in CLAUDE.md.
 
