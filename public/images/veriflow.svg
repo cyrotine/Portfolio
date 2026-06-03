@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360">
+  <!-- Background -->
+  <rect width="600" height="360" fill="#0d0b10"/>
+
+  <!-- Subtle grid dots -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#2a2535" opacity="0.6"/>
+  </pattern>
+  <rect width="600" height="360" fill="url(#dots)"/>
+
+  <!-- Radial glow at center -->
+  <radialGradient id="glow" cx="50%" cy="50%" r="40%">
+    <stop offset="0%" stop-color="#c2a4ff" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#c2a4ff" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="600" height="360" fill="url(#glow)"/>
+
+  <!-- Connection lines to satellites -->
+  <g stroke="#c2a4ff" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="300" y1="180" x2="170" y2="95"/>
+    <line x1="300" y1="180" x2="430" y2="95"/>
+    <line x1="300" y1="180" x2="155" y2="200"/>
+    <line x1="300" y1="180" x2="445" y2="200"/>
+    <line x1="300" y1="180" x2="200" y2="285"/>
+    <line x1="300" y1="180" x2="400" y2="285"/>
+  </g>
+
+  <!-- Satellite nodes -->
+  <!-- Search node -->
+  <circle cx="170" cy="95" r="26" fill="#160f20" stroke="#c2a4ff" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="170" y="101" text-anchor="middle" fill="#c2a4ff" font-size="20" font-family="sans-serif">⌕</text>
+
+  <!-- Extract node -->
+  <circle cx="430" cy="95" r="26" fill="#160f20" stroke="#c2a4ff" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="430" y="102" text-anchor="middle" fill="#c2a4ff" font-size="18" font-family="sans-serif">⊞</text>
+
+  <!-- Retrieve node -->
+  <circle cx="155" cy="200" r="26" fill="#160f20" stroke="#c2a4ff" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="155" y="206" text-anchor="middle" fill="#c2a4ff" font-size="18" font-family="sans-serif">↓</text>
+
+  <!-- Verify node -->
+  <circle cx="445" cy="200" r="26" fill="#160f20" stroke="#c2a4ff" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="445" y="207" text-anchor="middle" fill="#c2a4ff" font-size="18" font-family="sans-serif">✔</text>
+
+  <!-- Contradict node -->
+  <circle cx="200" cy="285" r="26" fill="#160f20" stroke="#c2a4ff" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="200" y="292" text-anchor="middle" fill="#c2a4ff" font-size="18" font-family="sans-serif">≠</text>
+
+  <!-- Judge node -->
+  <circle cx="400" cy="285" r="26" fill="#160f20" stroke="#c2a4ff" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="400" y="292" text-anchor="middle" fill="#c2a4ff" font-size="18" font-family="sans-serif">⚖</text>
+
+  <!-- Central hub — pulsing rings -->
+  <circle cx="300" cy="180" r="54" fill="none" stroke="#c2a4ff" stroke-opacity="0.08" stroke-width="1"/>
+  <circle cx="300" cy="180" r="44" fill="none" stroke="#c2a4ff" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Central hub fill -->
+  <circle cx="300" cy="180" r="36" fill="#1e1430" stroke="#c2a4ff" stroke-width="2"/>
+
+  <!-- Checkmark in center -->
+  <polyline points="286,180 296,192 316,168" fill="none" stroke="#c2a4ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Labels -->
+  <text x="170" y="132" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="sans-serif">Claim Extraction</text>
+  <text x="430" y="132" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="sans-serif">Evidence Retrieval</text>
+  <text x="136" y="237" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="sans-serif">Verification</text>
+  <text x="466" y="237" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="sans-serif">Contradiction</text>
+  <text x="200" y="322" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="sans-serif">Analysis</text>
+  <text x="400" y="322" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="sans-serif">Judging</text>
+</svg>
