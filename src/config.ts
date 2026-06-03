@@ -1,7 +1,7 @@
 export const config = {
     developer: {
-        name: "Redoyanul",
-        fullName: "Redoyanul Haque",
+        name: "Prahar",
+        fullName: "Prahar Shah",
         title: "AI & Full-Stack Developer",
         description: "AI & Full-Stack Developer building intelligent systems and modern web applications. Passionate about machine learning, deep learning, and creating next-gen autonomous agents."
     },
