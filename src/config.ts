@@ -16,90 +16,41 @@ export const config = {
         title: "About Me",
         description: "I'm a Computer Science student at LNMIIT Jaipur exploring the intersection of AI systems, machine learning, and software engineering. From multi-agent fact-checking pipelines and RAG workflows to medical imaging models and full-stack web applications, I enjoy turning complex ideas into products people can actually use. When I'm not building AI projects, you'll usually find me solving algorithmic problems, experimenting with new technologies, or refining developer tools.",
     },
-    experiences: [
+    achievements: [
         {
-            position: "Learning Something New",
-            company: "Self-Development",
-            period: "2025 - Present",
-            location: "Ahmedabad",
-            description: "Continuously exploring emerging technologies, researching advanced AI systems, and pushing the boundaries of what's possible in tech.",
-            responsibilities: [
-                "Researching cutting-edge AI and ML technologies",
-                "Experimenting with new frameworks and tools",
-                "Contributing to open-source projects",
-                "Building innovative personal projects"
-            ],
-            technologies: ["Research", "Innovation", "Open Source", "New Tech"]
+            title: "AI & ML Intern",
+            issuer: "Shipturtle",
+            year: "2026",
+            type: "internship",
+            description: "Working as an AI & ML intern at Shipturtle, building intelligent systems and machine learning solutions in a real-world product environment."
         },
         {
-            position: "AI Engineer",
-            company: "Freelance & Projects",
-            period: "2025",
-            location: "Ahmedabad",
-            description: "Developing intelligent AI systems, chatbots, and machine learning solutions. Building next-gen conversational AI agents and JARVIS-like personal assistants.",
-            responsibilities: [
-                "Building AI-powered chatbots and conversational agents",
-                "Developing machine learning models with TensorFlow and PyTorch",
-                "Working with LLMs and transformer architectures",
-                "Creating autonomous AI systems and automation tools"
-            ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "LLMs", "NLP", "AI Agents"]
+            title: "LeetCode Knight",
+            issuer: "LeetCode",
+            year: "2026",
+            type: "competitive",
+            description: "Earned the Knight badge on LeetCode with a maximum contest rating of 1868, placing in the top tier of competitive programmers on the platform."
         },
         {
-            position: "Full-Stack Developer",
-            company: "Freelance & Projects",
-            period: "2024",
-            location: "Ahmedabad",
-            description: "Built complete web applications from frontend to backend. Developed responsive UIs, RESTful APIs, and database solutions for various clients and projects.",
-            responsibilities: [
-                "Developing full-stack web applications using React and Node.js",
-                "Building RESTful APIs and integrating databases",
-                "Creating responsive and interactive user interfaces",
-                "Deploying and maintaining web applications"
-            ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "TypeScript"]
+            title: "Tata Elxsi Teleport 2026 — Rank 73",
+            issuer: "Tata Elxsi",
+            year: "2026",
+            type: "competition",
+            description: "Ranked 73rd out of 47,000+ participants nationwide — Top 0.16% nationally — in Tata Elxsi's flagship national-level engineering competition."
         },
         {
-            position: "Python Developer",
-            company: "Self-Taught & Projects",
-            period: "2023",
-            location: "Ahmedabad",
-            description: "Dove deep into Python programming, building automation scripts, bots, and mastering the fundamentals of software development and problem-solving.",
-            responsibilities: [
-                "Learning Python programming and core concepts",
-                "Building automation scripts and Discord bots",
-                "Exploring data structures and algorithms",
-                "Participating in competitive programming"
-            ],
-            technologies: ["Python", "Automation", "Scripting", "Discord.py", "Problem Solving"]
+            title: "Oracle Cloud Infrastructure Generative AI Professional",
+            issuer: "Oracle University",
+            year: "2025",
+            type: "certification",
+            description: "Certified by Oracle University as an OCI 2025 Generative AI Professional, validating expertise in building and deploying generative AI solutions on Oracle Cloud."
         },
         {
-            position: "Graphic Designer",
-            company: "Freelance",
-            period: "2022",
-            location: "Ahmedabad",
-            description: "Started my creative journey as a graphic designer, creating logos, banners, and visual content. This sparked my passion for technology and digital creation.",
-            responsibilities: [
-                "Designing logos and brand identity materials",
-                "Creating social media graphics and banners",
-                "Working with clients on creative projects",
-                "Learning design principles and visual aesthetics"
-            ],
-            technologies: ["Photoshop", "Illustrator", "Canva", "Figma", "Visual Design"]
-        },
-        {
-            position: "Microsoft Office",
-            company: "Begin Learning",
-            period: "2021",
-            location: "Ahmedabad",
-            description: "Started my journey into the digital world by learning Microsoft Office tools. This foundational step introduced me to computers and sparked my curiosity for technology.",
-            responsibilities: [
-                "Learning Microsoft Word, Excel, and PowerPoint",
-                "Creating documents and presentations",
-                "Understanding basic computer operations",
-                "Building foundational digital skills"
-            ],
-            technologies: ["MS Word", "MS Excel", "MS PowerPoint", "Computer Basics"]
+            title: "Codeforces Pupil",
+            issuer: "Codeforces",
+            year: "2025",
+            type: "competitive",
+            description: "Achieved Pupil rank on Codeforces with a maximum rating of 1357, competing consistently in rated rounds and sharpening algorithmic problem-solving skills."
         }
     ],
     projects: [
