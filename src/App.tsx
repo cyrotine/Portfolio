@@ -7,7 +7,6 @@ import "./App.css";
 const BlackHoleModel = lazy(() => import("./components/BlackHole"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
 const MyWorks = lazy(() => import("./pages/MyWorks"));
-const Play = lazy(() => import("./pages/Play"));
 import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
@@ -33,14 +32,6 @@ const App = () => {
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <MyWorks />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/play"
-          element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <Play />
             </Suspense>
           }
         />
