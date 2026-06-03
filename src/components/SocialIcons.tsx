@@ -77,7 +77,7 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a className="resume-button" href="https://drive.google.com/file/d/10M59GYZyjKMIl7M8fQsdSuMwy7x3FndD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
