@@ -1,9 +1,5 @@
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { SiLeetcode, SiCodeforces } from "react-icons/si";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
@@ -60,24 +56,24 @@ const SocialIcons = () => {
   return (
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
-        <span>
-          <a href={config.contact.github} target="_blank" rel="noopener noreferrer">
+        <span data-label="GitHub">
+          <a href={config.contact.github} title="GitHub" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
         </span>
-        <span>
-          <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer">
+        <span data-label="LinkedIn">
+          <a href={config.contact.linkedin} title="LinkedIn" target="_blank" rel="noopener noreferrer">
             <FaLinkedinIn />
           </a>
         </span>
-        <span>
-          <a href={config.contact.twitter} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter />
+        <span data-label="LeetCode">
+          <a href={config.contact.leetcode} title="LeetCode" target="_blank" rel="noopener noreferrer">
+            <SiLeetcode />
           </a>
         </span>
-        <span>
-          <a href={config.contact.instagram} target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
+        <span data-label="Codeforces">
+          <a href={config.contact.codeforces} title="Codeforces" target="_blank" rel="noopener noreferrer">
+            <SiCodeforces />
           </a>
         </span>
       </div>
