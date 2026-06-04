@@ -333,7 +333,7 @@
 
   .what-box-in {
     height: 500px;
-    margin-left: -50px;
+    margin-left: 0;
   }
 
   .what-content {
@@ -439,11 +439,26 @@
     place-items: inherit;
     align-items: start;
     justify-content: left;
+    overflow: hidden;
   }
 
   .what-box {
     max-width: calc(100% - 25px);
     margin: 0;
+  }
+
+  .what-content {
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .what-content {
+    padding: 20px;
+  }
+
+  .what-content h3 {
+    font-size: 20px;
   }
 }
 
