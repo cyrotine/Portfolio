@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import Lenis from "lenis";
 import "./styles/Navbar.css";
@@ -41,6 +42,22 @@ const Navbar = () => {
     }
     requestAnimationFrame(raf);
 
+    // Desktop inline links — use Lenis scroll
+    let links = document.querySelectorAll(".header ul a");
+    links.forEach((elem) => {
+      const element = elem as HTMLAnchorElement;
+      element.addEventListener("click", (e) => {
+        if (window.innerWidth > 1024) {
+          e.preventDefault();
+          const section = element.getAttribute("data-href");
+          if (section && lenis) {
+            const target = document.querySelector(section) as HTMLElement;
+            if (target) lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+          }
+        }
+      });
+    });
+
     window.addEventListener("resize", () => lenis?.resize());
 
     return () => {
@@ -48,14 +65,14 @@ const Navbar = () => {
     };
   }, []);
 
-  // Set initial hidden state for dropdown
+  // Set initial hidden state for sidebar
   useEffect(() => {
     if (dropdownRef.current) {
-      gsap.set(dropdownRef.current, { display: "none", clipPath: "inset(0 0 100% 0)" });
+      gsap.set(dropdownRef.current, { display: "none", x: "100%" });
     }
   }, []);
 
-  // Dropdown open/close animation
+  // Sidebar open/close animation
   useEffect(() => {
     const dropdown = dropdownRef.current;
     const links = linksRef.current;
@@ -67,19 +84,19 @@ const Navbar = () => {
       gsap.set(dropdown, { display: "flex" });
       gsap.fromTo(
         dropdown,
-        { clipPath: "inset(0 0 100% 0)" },
-        { clipPath: "inset(0 0 0% 0)", duration: 0.5, ease: "power3.inOut" }
+        { x: "100%" },
+        { x: "0%", duration: 0.4, ease: "power3.inOut" }
       );
       gsap.fromTo(
         Array.from(links.children),
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.45, stagger: 0.09, ease: "power2.out", delay: 0.2 }
+        { opacity: 0, x: 20 },
+        { opacity: 1, x: 0, duration: 0.35, stagger: 0.07, ease: "power2.out", delay: 0.15 }
       );
     } else {
       if (!isVisible) return;
       gsap.to(dropdown, {
-        clipPath: "inset(0 0 100% 0)",
-        duration: 0.4,
+        x: "100%",
+        duration: 0.35,
         ease: "power3.inOut",
         onComplete: () => { gsap.set(dropdown, { display: "none" }); },
       });
@@ -119,6 +136,19 @@ const Navbar = () => {
         >
           {config.contact.email}
         </a>
+
+        {/* Desktop inline links — hidden below 1024px via CSS */}
+        <ul className="nav-desktop-links">
+          {NAV_LINKS.map(({ label, href }) => (
+            <li key={href}>
+              <a data-href={href} href={href}>
+                <HoverLinks text={label} />
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Hamburger — hidden at ≥1024px via CSS */}
         <button
           className={`nav-menu-btn${isOpen ? " nav-menu-open" : ""}`}
           onClick={() => setIsOpen((o) => !o)}
@@ -130,6 +160,12 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Backdrop — closes sidebar on outside click */}
+      {isOpen && (
+        <div className="nav-backdrop" onClick={() => setIsOpen(false)} />
+      )}
+
+      {/* Sidebar panel */}
       <div className="nav-dropdown" ref={dropdownRef}>
         <ul className="nav-dropdown-links" ref={linksRef}>
           {NAV_LINKS.map(({ label, href }) => (
