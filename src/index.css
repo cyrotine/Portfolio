@@ -48,6 +48,7 @@ body {
     height: auto !important;
     min-height: 100vh !important;
     touch-action: manipulation;
+    padding-bottom: 80px;
   }
 
   html {
@@ -60,6 +61,13 @@ body {
   .container-main {
     position: static !important;
     height: auto !important;
+  }
+}
+
+/* Restore native cursor on touch/pointer-coarse devices */
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
   }
 }
 

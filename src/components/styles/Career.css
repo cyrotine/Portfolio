@@ -263,9 +263,17 @@
   .career-section {
     padding-top: 90px;
     margin-top: 0px;
+    overflow-x: hidden;
 
     align-items: start;
     place-items: inherit;
     justify-content: left;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .career-section h2 {
+    font-size: 34px;
+    line-height: 36px;
   }
 }
