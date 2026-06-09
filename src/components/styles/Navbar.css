@@ -183,17 +183,24 @@
   }
 }
 
-/* Desktop: show inline links, hide hamburger */
+/* Desktop: grid layout — logo | email | nav links (no overlap possible) */
 @media only screen and (min-width: 1024px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .navbar-connect {
+    position: static;
+    transform: none;
+  }
   .nav-desktop-links {
     display: flex;
+    justify-self: end;
+    gap: 40px;
+    font-size: 14px;
   }
   .nav-menu-btn {
     display: none;
-  }
-  .nav-desktop-links {
-    gap: 40px;
-    font-size: 14px;
   }
 }
 

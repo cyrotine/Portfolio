@@ -392,7 +392,7 @@
 h2.landing-info-h2 {
   color: #c481ff;
   font-size: 36px;
-  width: 150%;
+  width: auto;
   margin: 0;
   font-family: "Geist", sans-serif;
   font-weight: 600;
@@ -479,6 +479,20 @@ h2.landing-info-h2 {
   }
 }
 
+/* Tablet range — center text and prevent right-side clip */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .landing-info {
+    width: calc(100% - 30px);
+    text-align: center;
+  }
+
+  .landing-info h2,
+  h2.landing-info-h2 {
+    white-space: normal;
+    width: auto;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .character-model {
     height: 100vh;
@@ -506,7 +520,7 @@ h2.landing-info-h2 {
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
-    left: 66%;
+    left: 45%;
   }
 }
 
@@ -525,7 +539,7 @@ h2.landing-info-h2 {
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
-    left: 70%;
+    left: 50%;
   }
 }
 
