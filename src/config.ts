@@ -81,6 +81,15 @@ export const config = {
             github: "https://colab.research.google.com/drive/1n92KUZzYnxgiK_0p54q6rPNq_PRd4_Eh",
             description: "A clinical analytics project focused on uncovering diagnostic patterns from biomarker data through statistical analysis, visualisation, and machine learning workflows.",
         },
+        {
+            id: 4,
+            title: "Forge",
+            category: "Agentic AI",
+            technologies: "Python, FastAPI, LangGraph, Gemini API, Qdrant, PostgreSQL, Next.js",
+            image: "/images/forge.svg",
+            github: "https://github.com/cyrotine/Sentinel",
+            description: "An autonomous multi-agent software engineer that converts a GitHub issue into a merge-ready pull request. A 6-agent LangGraph pipeline plans, writes, tests, and reviews code against a tree-sitter + Qdrant RAG knowledge base, automating the full Git lifecycle with a 3-iteration auto-repair loop streamed on a real-time Next.js dashboard.",
+        },
     ],
     contact: {
         email: "praharshah2005@gmail.com",
