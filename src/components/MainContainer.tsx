@@ -10,6 +10,7 @@ import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import TechStackNew from "./TechStackNew";
 import CallToAction from "./CallToAction";
+import ChatButton from "./chat/ChatButton";
 import setSplitText from "./utils/splitText";
 
 const MainContainer = ({ children }: PropsWithChildren) => {
@@ -46,6 +47,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <CallToAction />
         <Contact />
       </div>
+      <ChatButton />
     </div>
   );
 };
