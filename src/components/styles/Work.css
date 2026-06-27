@@ -24,15 +24,22 @@
 
 /* ── Card grid ───────────────────────────────────────── */
 
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.work-pin {
+  overflow: hidden;
+  padding: 16px 0; /* room for card hover shadow (overflow-x-only isn't possible in CSS) */
+}
+
+.work-track {
+  display: flex;
+  flex-wrap: nowrap;
   gap: 20px;
+  will-change: transform;
 }
 
 /* ── Individual card ─────────────────────────────────── */
 
 .work-card {
+  flex: 0 0 calc((100% - 40px) / 3); /* 3 across, 2×20px gaps; rest clipped by .work-pin */
   background: #110f15;
   border: 1px solid #2a2530;
   border-radius: 16px;
@@ -195,8 +202,18 @@
     font-size: 50px;
   }
 
-  .work-grid {
+  .work-pin {
+    overflow: visible;
+    padding: 0;
+  }
+
+  .work-track {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-card {
+    flex: initial;
   }
 }
 
@@ -209,7 +226,7 @@
     font-size: 36px;
   }
 
-  .work-grid {
+  .work-track {
     grid-template-columns: 1fr;
   }
 
