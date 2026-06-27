@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { RESUME } from "./resume";
+import { RESUME } from "./resume.js";
 
 type Role = "user" | "assistant";
 interface Message {
